@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { createAndAuthenticateUser } from '@/use-cases/utils/test/create-and-authenticate-user'
 import request from 'supertest'
 import { afterAll, beforeAll, describe, expect, test } from 'vitest'
+
 describe('Create Checkin e2e', () => {
   beforeAll(async () => {
     await app.ready()

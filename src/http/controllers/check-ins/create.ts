@@ -16,7 +16,6 @@ export async function create(req: FastifyRequest, res: FastifyReply) {
     }),
   })
 
-  // eslint-disable-next-line prettier/prettier
   const { gymId } = createCheckInParamsSchema.parse(req.body)
   const { latitude, longitude } = createCheckInBodySchema.parse(req.query)
 

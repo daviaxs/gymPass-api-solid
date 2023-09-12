@@ -7,7 +7,6 @@ export async function validate(req: FastifyRequest, res: FastifyReply) {
     checkInId: z.string().uuid(),
   })
 
-  // eslint-disable-next-line prettier/prettier
   const { checkInId } = validateCheckInParamsSchema.parse(req.body)
 
   const validateCheckInUseCase = makeValidateCheckInUseCase()

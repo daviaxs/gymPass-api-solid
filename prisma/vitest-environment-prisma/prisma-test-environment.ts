@@ -6,7 +6,7 @@ export default <Environment>{
     console.log('Setup')
 
     return {
-      teardown() {
+      async teardown() {
         console.log('Teardown')
       },
     }

@@ -16,8 +16,8 @@ export async function create(req: FastifyRequest, res: FastifyReply) {
     }),
   })
 
-  const { gymId } = createCheckInParamsSchema.parse(req.body)
-  const { latitude, longitude } = createCheckInBodySchema.parse(req.query)
+  const { gymId } = createCheckInParamsSchema.parse(req.params)
+  const { latitude, longitude } = createCheckInBodySchema.parse(req.body)
 
   const checkInUseCase = makeCheckInUseCase()
 

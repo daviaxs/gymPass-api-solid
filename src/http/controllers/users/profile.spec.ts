@@ -12,18 +12,7 @@ describe('Profile (e2e)', () => {
   })
 
   it('should be able get to user profile', async () => {
-    await request(app.server).post('/users').send({
-      name: 'John Dash',
-      email: 'JohnDash@gmail.com',
-      password: '123456',
-    })
-
-    const authResponse = await request(app.server).post('/sessions').send({
-      email: 'JohnDash@gmail.com',
-      password: '123456',
-    })
-
-    const { token } = authResponse.body
+    
 
     const profileResponse = await request(app.server)
       .get('/me')
